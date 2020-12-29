@@ -18,5 +18,6 @@ Now, to apply the Runge-Kutta method, the two coupled second order equations mus
 <img src="https://render.githubusercontent.com/render/math?math=\large f_3 = \dot{y_3} = \frac{q}{m}(E_0 - y_4B_0)">
 <img src="https://render.githubusercontent.com/render/math?math=\large f_4 = \dot{y_4} = \frac{q}{m}(y_3B_0)">
 
-These functions and the initial positions and velocities are passed to the RK44 function, which returns the updated
-position and velocity vectors along the path.
+These functions and the initial positions and velocities are passed to the RK44 function, which returns the updated position and velocity vectors along the path. We call charge(0,1) and charge(1,1) to simulate helix and cycloid trajectories respectively.
+
+![](charge.png)
