@@ -37,6 +37,6 @@ Using the Euler-Lagrange equation <img src="https://render.githubusercontent.com
 <img src="https://render.githubusercontent.com/render/math?math=\large (m_1%2Bm_2)l_1\ddot\theta_1 %2B m_2l_2\ddot\theta_2\cos(\theta_1 %2D \theta_2) %2B m_2l_2\dot\theta_2^2\sin(\theta_1 %2D \theta_2) %2B (m_1%2Bm_2)g\sin\theta_1 = 0">
 <img src="https://render.githubusercontent.com/render/math?math=\large l_2\ddot\theta_2 %2B l_1\ddot\theta_1\cos(\theta_1 %2D \theta_2) %2D l_1\dot\theta_1^2\sin(\theta_1-\theta_2) %2B g\sin\theta_2 = 0">
 
-We decouple them as in the previous example and call the RK44 function with initial angles as 30 and 60 degrees. Below is the gif obtained using the matplotlib animation package -
+We decouple them as in the previous example and call the RK44 function with initial angles as 30 and 60 degrees. Masses and lengths are same. Below is the gif obtained using the matplotlib animation package -
 
 ![](doublependulum.gif)
