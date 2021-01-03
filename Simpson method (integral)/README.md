@@ -1,6 +1,6 @@
 # Simpson method
 
-This method is used to approximate definite integrals by quadratic interpolation. The function Simpson.py takes in the function to be integrated and the integration limits as arguments and returns the answer.
+This method is used to approximate definite integrals by quadratic interpolation. The function Simpson.py takes in the function to be integrated, the integration limits and the number of discrete steps as arguments and returns the answer.
 
 ## Diffraction pattern
 
