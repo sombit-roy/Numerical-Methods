@@ -17,3 +17,5 @@ Using the shooting method, we solve the <img src="https://render.githubuserconte
 The boundary conditions are <img src="https://render.githubusercontent.com/render/math?math=y(-1)=(-1)^n"> and <img src="https://render.githubusercontent.com/render/math?math=y(1)=1">.
 
 Plotted below are the solutions for n = 5 and n = 6.
+
+![](legendre.png)
