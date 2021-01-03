@@ -1,6 +1,10 @@
-# Path  of a charged particle
+# Runge-Kutta method
 
-The Runge Kutta method of order 4 is used to solve for the path of a charged particle in an electromagnetic field.
+Runge-Kutta method is a numerical technique to solve initial value ODEs by temporal discretization. The function RK44.py can be used to solve two coupled second order equations. The equations must be decoupled to four first order equations.
+
+The RK method of order 4 is used to solve for the path of a charged particle in an electromagnetic field and simulating a double pendulum system.
+
+## Path  of a charged particle
 
 A charged particle in an electromagnetic field is a second order system. Its governing differential equation is given by the Lorentz force equation -
 
@@ -11,13 +15,19 @@ Assuming <img src="https://render.githubusercontent.com/render/math?math=\textbf
 <img src="https://render.githubusercontent.com/render/math?math=\large \ddot{x} = \frac{q}{m}(E_0 - \dot{y}B_0)">
 <img src="https://render.githubusercontent.com/render/math?math=\large \ddot{y} = \frac{q}{m}\dot{x}B_0">
 
-Now, to apply the Runge-Kutta method, the two coupled second order equations must be converted to four first order equations. We decouple them by considering <img src="https://render.githubusercontent.com/render/math?math=x=y_1">, <img src="https://render.githubusercontent.com/render/math?math=y=y_2">, <img src="https://render.githubusercontent.com/render/math?math=\dot{x}=y_3"> and <img src="https://render.githubusercontent.com/render/math?math=\dot{y}=y_4">. Then, we define the functions as - 
+We decouple them by considering <img src="https://render.githubusercontent.com/render/math?math=x=y_1">, <img src="https://render.githubusercontent.com/render/math?math=y=y_2">, <img src="https://render.githubusercontent.com/render/math?math=\dot{x}=y_3"> and <img src="https://render.githubusercontent.com/render/math?math=\dot{y}=y_4">. Then, we define the functions as - 
 
 <img src="https://render.githubusercontent.com/render/math?math=\large f_1 = \dot{y_1} = y_3">
 <img src="https://render.githubusercontent.com/render/math?math=\large f_2 = \dot{y_2} = y_4">
 <img src="https://render.githubusercontent.com/render/math?math=\large f_3 = \dot{y_3} = \frac{q}{m}(E_0 - y_4B_0)">
 <img src="https://render.githubusercontent.com/render/math?math=\large f_4 = \dot{y_4} = \frac{q}{m}(y_3B_0)">
 
-These functions and the initial positions and velocities are passed to the RK44 function, which returns the updated position and velocity vectors along the path. We call charge(0,1) and charge(1,1) to simulate helix and cycloid trajectories respectively.
+These functions and the initial positions and velocities are passed to the RK44 function, which returns the updated position and velocity vectors along the path. We call charge(0,1) and charge(1,1) to plot helix and cycloid trajectories respectively.
 
 ![](charge.png)
+
+## Double Pendulum
+
+The lagrangian of the double pendulum system is - 
+
+<img src="https://render.githubusercontent.com/render/math?math=\large L = \left(\frac{m_1}{2} %2B \frac{m_2}{2}\right) l_1^2\dot\theta_1^2 %2B \frac{m_2}{2}l_2^2\dot\theta_2^2 %2B m_2l_1l_2\dot\theta_1\dot\theta_2\cos(\theta_1-\theta_2) %2B (m_1%2Bm_2)gl_1\cos\theta_1 %2B m_2gl_2\cos\theta_2">
